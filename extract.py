@@ -19,24 +19,24 @@ def extract_dimension(ifc_file, ifc_type : str):
                         if property.Name == "Reference":
                             name_list.append(property.NominalValue.wrappedValue)
                 
-            if property_set.Name == "PSet_Revit_Dimensions":
-                tmp = []
-                for property in property_set.HasProperties:
-                    tmp.append(property.Name)
-                    #print(property.Name)
-                    if property.Name == "Perimeter":
-                        perimeter_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Area":
-                        area_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Volume":
-                        vol_list.append(property.NominalValue.wrappedValue)
-                #print(len(tmp))
-                if not "Perimeter" in tmp:
-                    perimeter_list.append(np.nan)
-                elif not "Area" in tmp:
-                    area_list.append(np.nan)
-                elif not "Volume" in tmp:
-                    vol_list.append(np.nan)
+                if property_set.Name == "PSet_Revit_Dimensions":
+                    tmp = []
+                    for property in property_set.HasProperties:
+                        tmp.append(property.Name)
+                        #print(property.Name)
+                        if property.Name == "Perimeter":
+                            perimeter_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Area":
+                            area_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Volume":
+                            vol_list.append(property.NominalValue.wrappedValue)
+                    #print(len(tmp))
+                    if not "Perimeter" in tmp:
+                        perimeter_list.append(np.nan)
+                    elif not "Area" in tmp:
+                        area_list.append(np.nan)
+                    elif not "Volume" in tmp:
+                        vol_list.append(np.nan)
 
         df["Perimeter"] = perimeter_list
         df["Area"] = area_list
@@ -62,24 +62,24 @@ def extract_dimension(ifc_file, ifc_type : str):
                         if property.Name == "Reference":
                             name_list.append(property.NominalValue.wrappedValue)
                 
-            if property_set.Name == "PSet_Revit_Dimensions":
-                tmp = []
-                for property in property_set.HasProperties:
-                    tmp.append(property.Name)
-                    #print(property.Name)
-                    if property.Name == "Length":
-                        len_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Area":
-                        area_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Volume":
-                        vol_list.append(property.NominalValue.wrappedValue)
-                #print(len(tmp))
-                if not "Length" in tmp:
-                    len_list.append(np.nan)
-                elif not "Area" in tmp:
-                    area_list.append(np.nan)
-                elif not "Volume" in tmp:
-                    vol_list.append(np.nan)
+                if property_set.Name == "PSet_Revit_Dimensions":
+                    tmp = []
+                    for property in property_set.HasProperties:
+                        tmp.append(property.Name)
+                        #print(property.Name)
+                        if property.Name == "Length":
+                            len_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Area":
+                            area_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Volume":
+                            vol_list.append(property.NominalValue.wrappedValue)
+                    #print(len(tmp))
+                    if not "Length" in tmp:
+                        len_list.append(np.nan)
+                    elif not "Area" in tmp:
+                        area_list.append(np.nan)
+                    elif not "Volume" in tmp:
+                        vol_list.append(np.nan)
 
         df["Length"] = len_list
         df["Area"] = area_list
@@ -106,28 +106,28 @@ def extract_dimension(ifc_file, ifc_type : str):
                         if property.Name == "Reference":
                             name_list.append(property.NominalValue.wrappedValue)
                 
-            if property_set.Name == "PSet_Revit_Dimensions":
-                tmp = []
-                for property in property_set.HasProperties:
-                    tmp.append(property.Name)
-                    #print(property.Name)
-                    if property.Name == "Perimeter":
-                        perimeter_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Area":
-                        area_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Volume":
-                        vol_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Thickness":
-                        thick_list.append(property.NominalValue.wrappedValue)
-                #print(len(tmp))
-                if not "Perimeter" in tmp:
-                    perimeter_list.append(np.nan)
-                elif not "Area" in tmp:
-                    area_list.append(np.nan)
-                elif not "Volume" in tmp:
-                    vol_list.append(np.nan)
-                elif not "Thickness" in tmp:
-                    thick_list.append(np.nan)
+                if property_set.Name == "PSet_Revit_Dimensions":
+                    tmp = []
+                    for property in property_set.HasProperties:
+                        tmp.append(property.Name)
+                        #print(property.Name)
+                        if property.Name == "Perimeter":
+                            perimeter_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Area":
+                            area_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Volume":
+                            vol_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Thickness":
+                            thick_list.append(property.NominalValue.wrappedValue)
+                    #print(len(tmp))
+                    if not "Perimeter" in tmp:
+                        perimeter_list.append(np.nan)
+                    elif not "Area" in tmp:
+                        area_list.append(np.nan)
+                    elif not "Volume" in tmp:
+                        vol_list.append(np.nan)
+                    elif not "Thickness" in tmp:
+                        thick_list.append(np.nan)
 
         df["Perimeter"] = perimeter_list
         df["Area"] = area_list
@@ -154,24 +154,24 @@ def extract_dimension(ifc_file, ifc_type : str):
                         if property.Name == "Reference":
                             name_list.append(property.NominalValue.wrappedValue)
                 
-            if property_set.Name == "PSet_Revit_Type_Dimensions":
-                tmp = []
-                for property in property_set.HasProperties:
-                    tmp.append(property.Name)
-                    #print(property.Name)
-                    if property.Name == "Thickness":
-                        thick_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Height":
-                        height_list.append(property.NominalValue.wrappedValue)
-                    if property.Name == "Width":
-                        width_list.append(property.NominalValue.wrappedValue)
-                #print(len(tmp))
-                if not "Thickness" in tmp:
-                    thick_list.append(np.nan)
-                elif not "Height" in tmp:
-                    height_list.append(np.nan)
-                elif not "Width" in tmp:
-                    width_list.append(np.nan)
+                if property_set.Name == "PSet_Revit_Type_Dimensions":
+                    tmp = []
+                    for property in property_set.HasProperties:
+                        tmp.append(property.Name)
+                        #print(property.Name)
+                        if property.Name == "Thickness":
+                            thick_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Height":
+                            height_list.append(property.NominalValue.wrappedValue)
+                        if property.Name == "Width":
+                            width_list.append(property.NominalValue.wrappedValue)
+                    #print(len(tmp))
+                    if not "Thickness" in tmp:
+                        thick_list.append(np.nan)
+                    elif not "Height" in tmp:
+                        height_list.append(np.nan)
+                    elif not "Width" in tmp:
+                        width_list.append(np.nan)
 
         df["Thickness"] = thick_list
         df["Height"] = height_list
