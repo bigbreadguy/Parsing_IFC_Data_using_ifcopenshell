@@ -1,3 +1,6 @@
+import pandas as pd
+import numpy as np
+
 def extract_dimension(ifc_file, ifc_type : str):
 
     if ifc_type=="IfcCovering":
