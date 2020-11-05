@@ -1,4 +1,4 @@
-def extract_dimension(ifc_type : str, ifc_file = ifc_file):
+def extract_dimension(ifc_file, ifc_type : str):
 
     if ifc_type=="IfcCovering":
         df = pd.DataFrame(columns = ["Name","IFC_Type", "Perimeter", "Area", "Volume"])
