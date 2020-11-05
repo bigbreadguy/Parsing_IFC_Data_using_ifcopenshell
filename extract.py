@@ -81,7 +81,7 @@ def extract_dimension(ifc_file, ifc_type : str):
                 elif not "Volume" in tmp:
                     vol_list.append(np.nan)
 
-        df["Length"] = length_list
+        df["Length"] = len_list
         df["Area"] = area_list
         df["Volume"] = vol_list
         df["IFC_Type"] = ifc_type
